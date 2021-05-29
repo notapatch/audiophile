@@ -7,7 +7,7 @@
 #
 
 OPTIND=1
-domain='bcs.io'
+domain='julianwigley.com'
 staging_server='oxna'
 production_server='papa'
 

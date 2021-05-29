@@ -10,7 +10,7 @@ ip_address=''
 print_usage() {
   printf "***************************************************\n"
   printf "*                                                 *\n"
-  printf "*                  BCS.io                         *\n"
+  printf "*               JulianWigley.com                  *\n"
   printf "*                                                 *\n"
   printf "***************************************************\n\n"
   printf "Terraform bash script wrapper for creating\n"
