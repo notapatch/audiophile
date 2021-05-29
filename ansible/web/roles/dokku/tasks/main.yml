@@ -1,0 +1,28 @@
+---
+- import_role:
+    name: dokku_bot.ansible_dokku
+  vars:
+    dokku_skip_key_file: 'true'
+    dokku_users:
+      - name: richard
+        username: richard
+        ssh_key: "{{ lookup('file', controller_key) }}"
+
+- name: apps:create {{ dokku.application }}
+  dokku_app:
+    app: "{{ dokku.application }}"
+    state: present
+  tags:
+    - dokku
+
+- name: domains:add {{ dokku.application }} {{ domain }}
+  dokku_domains:
+    app: "{{ dokku.application }}"
+    domains:
+      - "{{ domain }}"
+    state: present
+  tags:
+    - dokku
+
+- import_tasks: rails.yml
+- import_tasks: ssl.yml
