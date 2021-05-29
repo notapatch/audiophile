@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+#
+# ansible provision server
+#
+
+tags=all
+environment='staging'
+
+print_usage() {
+  printf "Ansible wrapper\n\n"
+  printf "options are as follows:\n"
+  printf "Limiting of playbook hosts - optional:\n"
+  printf "  -p production\n"
+  printf "  -s staging\n\n"
+  printf ""
+  printf "  -t tag applied to the running playbook\n"
+  printf "     Example tags:\n"
+  printf "     dokku, database, import\n"
+  printf "Example: bin/ansible-playbook -t dokku  \n"
+}
+
+
+while getopts 'adht:ps' flag; do
+  case "${flag}" in
+    h) print_usage
+       exit 1 ;;
+    p) environment='production' ;;
+    s) environment='staging' ;;
+    t) tags=$OPTARG ;;
+    *) print_usage
+       exit 1;;
+  esac
+done
+
+if (( $OPTIND == 1 )); then
+  print_usage
+  exit 1
+fi
+
+ansible_path="./ansible/web"
+
+(cd $ansible_path && ansible-playbook site.yml --inventory ${environment}  --tags "${tags}")
