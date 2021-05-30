@@ -31,6 +31,9 @@
 # Ignore environmental specific key for encrypting/decrypting credentials
 /config/credentials/*.key
 
+# Except test.key
+!/config/credentials/test.key
+
 /public/packs
 /public/packs-test
 /node_modules
