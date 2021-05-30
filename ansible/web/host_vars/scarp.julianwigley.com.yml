@@ -1,4 +1,4 @@
 ---
-domain: bcs.io
+domain: julianwigley.com
 rails_env: production
 rails_master_key:  '../../rails/config/credentials/production.key'

@@ -25,7 +25,7 @@
     - ssl
 
 # Letsencrypt auto renew
-# - If this fails: dokku letsencrypt bcs-io
+# - If this fails: dokku letsencrypt julianwigley.com
 #
 # Auto renew when we have a website returning 200 (OK!) or when we get error code saying SSL has failed
 #

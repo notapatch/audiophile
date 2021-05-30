@@ -6,7 +6,7 @@ controller_key: '~/.ssh/id_rsa.pub'
 
 # Dokku Specific
 dokku:
-  application: bcs-io
+  application: audiophile
   ops_email: ops@bcs.io
 
 
