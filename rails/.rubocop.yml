@@ -1,0 +1,21 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'config/**/*.rb'
+    - 'db/schema.rb'
+    - 'bin/*'
+    - 'config.ru'
+    - 'Gemfile'
+    - 'Rakefile'
+
+# Cop supports --auto-correct.
+# Configuration parameters: EnforcedStyle.
+# SupportedStyles: always, always_true, never
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
