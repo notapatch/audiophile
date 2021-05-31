@@ -15,9 +15,9 @@
     - dokku
     - ssl
 
-- name: website live {{ dokku.application }}
+- name: website live {{ hostname }}
   uri:
-    url: "http://{{ domain }}"
+    url: "http://{{ hostname }}"
   ignore_errors: yes
   register: http_response
   tags:

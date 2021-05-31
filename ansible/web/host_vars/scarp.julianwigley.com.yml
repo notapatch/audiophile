@@ -1,4 +1,4 @@
 ---
-domain: julianwigley.com
+hostname: audiophile.apps.julianwigley.com
 rails_env: production
 rails_master_key:  '../../rails/config/credentials/production.key'

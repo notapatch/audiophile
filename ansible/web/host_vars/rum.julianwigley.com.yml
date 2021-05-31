@@ -1,5 +1,5 @@
 ---
-domain: staging.julianwigley.com
+hostname: staging.audiophile.julianwigley.com
 rails_env: staging
 rack_dev_mark_env: staging
 rails_master_key:  '../../rails/config/credentials/staging.key'

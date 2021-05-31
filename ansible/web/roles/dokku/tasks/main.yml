@@ -15,11 +15,10 @@
   tags:
     - dokku
 
-- name: domains:add {{ dokku.application }} {{ domain }}
+- name: domains:add {{ dokku.application }} {{ hostname }}
   dokku_domains:
     app: "{{ dokku.application }}"
-    domains:
-      - "{{ domain }}"
+    domains: "{{ hostname }}"
     state: present
   tags:
     - dokku
